@@ -38,6 +38,10 @@ module.exports = (fn) => {
 
         const args = params.map((e) => value[e]).filter((e) => e);
 
+        if (reqParams.request) {
+          reqParams.request = '<typeof Request>';
+        }
+
         logger.debug('Calling::', name, 'with params::', reqParams);
 
         const response = await fn(...args);
