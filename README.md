@@ -38,7 +38,7 @@ curl --location --request POST 'http://localhost:3000/onboardCompany' \
 --data-raw '{
     "name": "Zigzag",
     "site": "www.gozigzag.com",
-    "phone": "+17785225409"
+    "phone": "+17777777777"
 }'
 ```
 
