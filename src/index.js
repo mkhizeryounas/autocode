@@ -8,7 +8,6 @@ const parser = require('./libs/parser');
 
 class Autocode {
   constructor() {
-    this.fns = [];
     this.app = express();
     this.app.use(expressLogger('dev'));
     this.app.use(express.json());
