@@ -1,7 +1,23 @@
 {
-  "name": "@mkhizeryounas/autocode",
-  "version": "1.0.4",
-  "description": "This is a simple nodejs based logger.",
+  "name": "zigzag",
+  "version": "0.0.0",
+  "private": true,
+  "path": "./src",
+  "scripts": {
+    "start": "node examples/index.js",
+    "dev": "nodemon examples/index.js",
+    "test": "mocha",
+    "test:watch": "mocha --watch",
+    "precommit-msg": "echo '🚀 Pre-commit checks...' && exit 0",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✨ Linter passed!'",
+    "format": "pretty-quick --staged"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint",
+    "format"
+  ],
+  "license": "MIT",
   "main": "src/index.js",
   "engines": {
     "node": ">=14.16.1",
@@ -28,33 +44,5 @@
     "pre-commit": "^1.2.2",
     "prettier": "^2.5.1",
     "pretty-quick": "^3.1.2"
-  },
-  "scripts": {
-    "start": "node examples/index.js",
-    "dev": "nodemon examples/index.js",
-    "test": "mocha",
-    "test:watch": "mocha --watch",
-    "precommit-msg": "echo '🚀 Pre-commit checks...' && exit 0",
-    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✨ Linter passed!'",
-    "format": "pretty-quick --staged"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mkhizeryounas/autocode.git"
-  },
-  "keywords": [],
-  "author": "",
-  "pre-commit": [
-    "precommit-msg",
-    "lint",
-    "format"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mkhizeryounas/autocode/issues"
-  },
-  "homepage": "https://github.com/mkhizeryounas/autocode#readme"
+  }
 }
