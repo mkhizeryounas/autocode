@@ -1,7 +1,10 @@
 {
   "name": "zigzag",
   "version": "0.0.0",
-  "private": true,
+  "description": "Simple function hosting framework.",
+  "publishConfig": {
+    "access": "public"
+  },
   "path": "./src",
   "scripts": {
     "start": "node examples/index.js",
@@ -23,6 +26,16 @@
     "node": ">=14.16.1",
     "npm": ">=8.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkhizeryounas/autocode.git"
+  },
+  "keywords": [],
+  "author": "mkhizeryounas",
+  "bugs": {
+    "url": "https://github.com/mkhizeryounas/autocode/issues"
+  },
+  "homepage": "https://github.com/mkhizeryounas/autocode#readme",
   "dependencies": {
     "@mkhizeryounas/logger": "^1.0.4",
     "chai": "^4.3.6",
