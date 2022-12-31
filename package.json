@@ -1,0 +1,48 @@
+{
+  "name": "@mkhizeryounas/autocode",
+  "version": "0.0.0",
+  "private": true,
+  "path": "./src",
+  "scripts": {
+    "start": "node examples/index.js",
+    "dev": "nodemon examples/index.js",
+    "test": "mocha",
+    "test:watch": "mocha --watch",
+    "precommit-msg": "echo '🚀 Pre-commit checks...' && exit 0",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✨ Linter passed!'",
+    "format": "pretty-quick --staged"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint",
+    "format"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=14.16.1",
+    "npm": ">=8.3.0"
+  },
+  "dependencies": {
+    "@mkhizeryounas/logger": "^1.0.4",
+    "chai": "^4.3.6",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "esprima": "^4.0.1",
+    "express": "^4.18.2",
+    "joi": "^17.7.0",
+    "lodash": "^4.17.21",
+    "mocha": "^10.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-watch": "^8.0.0",
+    "nodemon": "^2.0.16",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.2"
+  }
+}
