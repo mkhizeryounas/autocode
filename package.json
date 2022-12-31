@@ -1,6 +1,6 @@
 {
   "name": "@mkhizeryounas/autocode",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Simple function hosting framework.",
   "publishConfig": {
     "access": "public"
