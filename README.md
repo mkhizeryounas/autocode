@@ -30,6 +30,18 @@ autocode.listen({ port: 3000 });
 node example.js
 ```
 
+**Request**
+
+```shell
+curl --location --request POST 'http://localhost:3000/onboardCompany' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Zigzag",
+    "site": "www.gozigzag.com",
+    "phone": "+17785225409"
+}'
+```
+
 ### Contributing
 
 Feel free to submit pull requests.
